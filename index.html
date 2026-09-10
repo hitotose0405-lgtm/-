@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="星詠み研究所｜数秘術と星詠みをモチーフにした診断">
+  <title>星詠み研究所｜SEIYOMI RESEARCH INSTITUTE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <b>✦</b>
+    <div>
+      <strong>星詠み研究所</strong>
+      <small>SEIYOMI RESEARCH INSTITUTE</small>
+    </div>
+  </div>
+  <span>PERSONALITY RESEARCH / ARCHIVE</span>
+</header>
+<main>
+<!-- =========================
+     INPUT
+========================= -->
+<section id="input" class="page on">
+  <div class="title">
+    <div>
+      <small>RESEARCH INTAKE / 01</small>
+      <h1>情報入力</h1>
+    </div>
+    <i>INPUT FORM</i>
+  </div>
+  <p class="lead">
+    あなたの基本情報を入力してください。<br>
+    入力された情報をもとに、数秘術と星詠みをモチーフとした独自の解析を行います。
+  </p>
+  <div class="panel">
+    <div class="ph">
+      <b>基本情報</b>
+      <small>ALL FIELDS REQUIRED</small>
+    </div>
+    <div class="form">
+      <!-- 生年月日 -->
+      <label>
+        生年月日
+        <em>BIRTH DATE</em>
+        <input id="date" type="date">
+      </label>
+      <!-- 血液型 -->
+      <div class="field">
+        <label>
+          血液型
+          <em>BLOOD TYPE</em>
+        </label>
+        <div class="choices" data-k="blood">
+          <button>A型</button>
+          <button>B型</button>
+          <button>O型</button>
+          <button>AB型</button>
+        </div>
+      </div>
+      <!-- 出身 -->
+      <div class="field wide">
+        <label>
+          出身
+          <em>ORIGIN</em>
+        </label>
+        <div class="choices six" data-k="origin">
+          <button>山</button>
+          <button>川</button>
+          <button>海</button>
+          <button>街</button>
+          <button>田園</button>
+          <button>古都</button>
+        </div>
+      </div>
+      <!-- 星座 -->
+      <div class="field wide">
+        <label>
+          星座
+          <em>ZODIAC</em>
+        </label>
+        <div class="choices six" data-k="zodiac">
+          <button>牡羊座</button>
+          <button>牡牛座</button>
+          <button>双子座</button>
+          <button>蟹座</button>
+          <button>獅子座</button>
+          <button>乙女座</button>
+          <button>天秤座</button>
+          <button>蠍座</button>
+          <button>射手座</button>
+          <button>山羊座</button>
+          <button>水瓶座</button>
+          <button>魚座</button>
+        </div>
+      </div>
+      <!-- 家族関係 -->
+      <div class="field">
+        <label>
+          家族関係
+          <em>FAMILY</em>
+        </label>
+        <div class="choices two" data-k="family">
+          <button>一人っ子</button>
+          <button>長子</button>
+          <button>真ん中</button>
+          <button>末っ子</button>
+        </div>
+      </div>
+      <!-- 利き手 -->
+      <div class="field">
+        <label>
+          利き手
+          <em>DOMINANT HAND</em>
+        </label>
+        <div class="choices two" data-k="hand">
+          <button>右利き</button>
+          <button>左利き</button>
+          <button>両利き</button>
+          <button>不明</button>
+        </div>
+      </div>
+      <!-- 出生時間 -->
+      <div class="field wide">
+        <label>
+          出生時間
+          <em>BIRTH TIME</em>
+        </label>
+        <div class="choices four" data-k="time">
+          <button>0:00–2:59</button>
+          <button>3:00–5:59</button>
+          <button>6:00–8:59</button>
+          <button>9:00–11:59</button>
+          <button>12:00–14:59</button>
+          <button>15:00–17:59</button>
+          <button>18:00–20:59</button>
+          <button>21:00–23:59</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p id="error" class="error" hidden>
+    未入力の項目があります。すべて選択してください。
+  </p>
+  <div class="steps">
+    01 <b>INPUT</b>　 02 ANALYSIS　 03 REPORT
+  </div>
+  <div class="actions">
+    <button id="go" class="primary">
+      ✦ 解析を開始する →
+    </button>
+    <button id="clear" class="secondary">
+      ↻ 入力内容をリセット
+    </button>
+  </div>
+</section>
+<!-- =========================
+     RESULT
+========================= -->
+<section id="result" class="page">
+  <div class="title">
+    <div>
+      <small>RESEARCH REPORT / 02</small>
+      <h1>診断結果</h1>
+    </div>
+    <i>ANALYSIS REPORT</i>
+  </div>
+  <div class="grid">
+    <!-- 総合評価 -->
+    <aside class="panel gradebox">
+      <small>OVERALL GRADE</small>
+      <strong id="grade">A+</strong>
+      <div class="score">
+        <span>総合適性</span>
+        <b id="total">--</b>
+      </div>
+      <div class="bar">
+        <i id="totalbar"></i>
+      </div>
+      <hr>
+      <small>REPORT ID</small>
+      <code id="rid">SR-000000</code>
+    </aside>
+    <!-- 中央 -->
+    <div class="center">
+      <div class="panel">
+        <div class="ph">
+          <b>基本情報</b>
+          <small>BASIC RECORD</small>
+        </div>
+        <dl id="record"></dl>
+      </div>
+      <div class="panel">
+        <div class="ph">
+          <b>能力解析</b>
+          <small>ABILITY STATUS</small>
+        </div>
+        <div id="abilities" class="abilities"></div>
+      </div>
+    </div>
+    <!-- 右 -->
+    <aside class="right">
+      <div class="panel profile">
+        <small>PERSONAL PROFILE</small>
+        <h2 id="type">—</h2>
+        <p id="summary">—</p>
+      </div>
+      <div class="panel mini">
+        <small>NUMEROLOGY</small>
+        <strong id="life">--</strong>
+        <p>運命数</p>
+      </div>
+      <div class="panel mini">
+        <small>RISK INDEX</small>
+        <strong id="risk">--</strong>
+        <p>変動性指数 / 100</p>
+        <div class="bar">
+          <i id="riskbar"></i>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <!-- 属性適性 -->
+  <div class="panel compat">
+    <div class="ph">
+      <b>属性適性</b>
+      <small>ATTRIBUTE COMPATIBILITY</small>
+    </div>
+    <div id="compat" class="compatgrid"></div>
+  </div>
+  <div class="actions">
+    <button id="detail" class="primary">
+      詳細診断を見る →
+    </button>
+    <button id="png" class="secondary">
+      ▣ SNS用画像を生成
+    </button>
+    <button id="back" class="text">
+      ← 入力画面へ戻る
+    </button>
+  </div>
+</section>
+<!-- =========================
+     DETAIL
+========================= -->
+<section id="details" class="page">
+  <div class="title">
+    <div>
+      <small>RESEARCH REPORT / 03</small>
+      <h1>詳細診断</h1>
+    </div>
+    <i>DETAILED REPORT</i>
+  </div>
+  <div class="detail">
+    <article class="panel hero">
+      <small>PERSONAL PROFILE</small>
+      <h2 id="dtype">—</h2>
+      <p id="dlead">—</p>
+    </article>
+    <article class="panel">
+      <div class="ph">
+        <b>本質</b>
+        <small>ESSENCE</small>
+      </div>
+      <p id="essence"></p>
+    </article>
+    <article class="panel">
+      <div class="ph">
+        <b>強み</b>
+        <small>STRENGTH</small>
+      </div>
+      <ul id="strength"></ul>
+    </article>
+    <article class="panel">
+      <div class="ph">
+        <b>注意点</b>
+        <small>OBSERVATION</small>
+      </div>
+      <ul id="caution"></ul>
+    </article>
+    <article class="panel">
+      <div class="ph">
+        <b>適性領域</b>
+        <small>FIELD OF APTITUDE</small>
+      </div>
+      <p id="fields"></p>
+    </article>
+  </div>
+  <div class="actions">
+    <button id="dpng" class="secondary">
+      ▣ SNS用画像を生成
+    </button>
+    <button id="bres" class="text">
+      ← 結果一覧へ戻る
+    </button>
+  </div>
+</section>
+</main>
+<footer>
+  SEIYOMI RESEARCH INSTITUTE · PERSONALITY ARCHIVE
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
