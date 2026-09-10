@@ -809,3 +809,104 @@ footer {
     width: 100%;
   }
 }
+
+/* ========================================
+   NEW INPUT ITEMS
+   ======================================== */
+
+/* Number input */
+.number-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 320px;
+}
+
+.number-input input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.8);
+
+  color: var(--navy);
+  font-family: inherit;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.number-input input:focus {
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(45, 91, 130, 0.08);
+}
+
+.number-input span {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+
+/* Explanation under input */
+.field-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+
+
+/* Special lineage */
+[data-k="lineage"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+[data-k="lineage"] button:last-child {
+  grid-column: 1 / -1;
+}
+
+
+/* Birth time */
+[data-k="time"] {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+/* Better spacing for larger choice groups */
+.choices {
+  gap: 8px;
+}
+
+.choices button {
+  min-height: 48px;
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .number-input {
+    max-width: 100%;
+  }
+
+  [data-k="lineage"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  [data-k="lineage"] button:last-child {
+    grid-column: 1 / -1;
+  }
+
+  [data-k="time"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
