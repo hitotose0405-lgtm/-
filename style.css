@@ -912,83 +912,112 @@ footer {
 }
 
 /* ========================================
-   07 / 08 NUMBER INPUT FIX
+   07・08 NUMBER INPUT
    ======================================== */
 
-.number-input {
+.number-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+.number-field {
+  min-width: 0;
+}
+
+.number-field label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.number-field label small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+/* 四角い入力枠 */
+.number-box {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 360px;
-  gap: 10px;
-}
-
-.number-input input[type="number"] {
-  display: block;
-  width: 100%;
-  min-width: 0;
   height: 52px;
-  padding: 0 16px;
-
   box-sizing: border-box;
 
   border: 1px solid var(--line);
-  border-radius: 0;
+  background: rgba(255, 255, 255, 0.82);
 
-  background: #ffffff;
-  color: var(--navy);
-
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 1;
-
-  appearance: auto;
-  -webkit-appearance: auto;
-
-  pointer-events: auto;
-  user-select: auto;
-  -webkit-user-select: auto;
-
-  outline: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.number-input input[type="number"]:focus {
+.number-box:focus-within {
   border-color: var(--blue);
+  background: #fff;
   box-shadow: 0 0 0 3px rgba(45, 91, 130, 0.08);
 }
 
-.number-input input[type="number"]::placeholder {
+.number-box input[type="number"] {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: var(--navy);
+  font-family: inherit;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+
+  appearance: auto;
+  -webkit-appearance: auto;
+}
+
+.number-box input[type="number"]::placeholder {
   color: #9aa7b3;
 }
 
-.number-input span {
-  display: block;
-  flex: 0 0 auto;
+.number-unit {
+  padding-right: 16px;
+  color: var(--muted);
+  font-size: 13px;
   white-space: nowrap;
+}
+
+/* 説明 */
+.number-field .field-note {
+  margin: 8px 0 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 11px;
+  line-height: 1.7;
 }
 
 
-/* 07・08の説明文 */
-.field-note {
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
-}
+/* ========================================
+   MOBILE
+   ======================================== */
 
-
-/* スマートフォン */
 @media (max-width: 640px) {
 
-  .number-input {
-    max-width: 100%;
-  }
-
-  .number-input input[type="number"] {
-    height: 50px;
-    font-size: 17px;
+  .number-fields {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
 }
