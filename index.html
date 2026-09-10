@@ -1,305 +1,672 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="星詠み研究所｜数秘術と星詠みをモチーフにした診断">
-  <title>星詠み研究所｜SEIYOMI RESEARCH INSTITUTE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星詠み研究所 | SEIYOMI RESEARCH INSTITUTE</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-  <div class="brand">
-    <b>✦</b>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="site-header">
+    <div class="brand-mark">✦</div>
+
+    <div class="brand">
+      <div class="brand-jp">星詠み研究所</div>
+      <div class="brand-en">SEIYOMI RESEARCH INSTITUTE</div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         INPUT
+    ========================== -->
+    <section id="input" class="page-section">
+
+      <div class="breadcrumb">
+        SEIYOMI RESEARCH INSTITUTE
+        <span>/</span>
+        RESEARCH INTAKE
+      </div>
+
+      <div class="page-title">
+        <span class="title-number">01</span>
+
+        <div>
+          <h1>情報入力</h1>
+          <p>RESEARCH INTAKE</p>
+        </div>
+      </div>
+
+
+      <!-- BASIC INFORMATION -->
+      <div class="panel">
+
+        <div class="panel-heading">
+          <div>
+            <span class="panel-number">01</span>
+            <span class="panel-title">基本情報</span>
+          </div>
+
+          <span class="panel-en">
+            BASIC INFORMATION
+          </span>
+        </div>
+
+
+        <div class="form">
+
+
+          <!-- 01 生年月日 -->
+          <div class="field">
+            <label>
+              <span class="field-number">01</span>
+              生年月日
+              <small>DATE OF BIRTH</small>
+            </label>
+
+            <input
+              type="date"
+              id="date"
+              required
+            >
+          </div>
+
+
+          <!-- 02 利き手 -->
+          <div class="field">
+            <label>
+              <span class="field-number">02</span>
+              利き手
+              <small>DOMINANT HAND</small>
+            </label>
+
+            <div
+              class="choices"
+              data-k="hand"
+            >
+              <button type="button" data-v="right">右利き</button>
+              <button type="button" data-v="left">左利き</button>
+              <button type="button" data-v="both">両利き</button>
+              <button type="button" data-v="unknown">不明</button>
+            </div>
+          </div>
+
+
+          <!-- 03 星座 -->
+          <div class="field">
+            <label>
+              <span class="field-number">03</span>
+              星座
+              <small>ZODIAC SIGN</small>
+            </label>
+
+            <div
+              class="choices six"
+              data-k="zodiac"
+            >
+              <button type="button" data-v="aries">牡羊座</button>
+              <button type="button" data-v="taurus">牡牛座</button>
+              <button type="button" data-v="gemini">双子座</button>
+              <button type="button" data-v="cancer">蟹座</button>
+              <button type="button" data-v="leo">獅子座</button>
+              <button type="button" data-v="virgo">乙女座</button>
+              <button type="button" data-v="libra">天秤座</button>
+              <button type="button" data-v="scorpio">蠍座</button>
+              <button type="button" data-v="sagittarius">射手座</button>
+              <button type="button" data-v="capricorn">山羊座</button>
+              <button type="button" data-v="aquarius">水瓶座</button>
+              <button type="button" data-v="pisces">魚座</button>
+            </div>
+          </div>
+
+
+          <!-- 04 出生順位・出生形態 -->
+          <div class="field">
+            <label>
+              <span class="field-number">04</span>
+              出生順位・出生形態
+              <small>BIRTH ORDER / FORM</small>
+            </label>
+
+            <div
+              class="choices"
+              data-k="family"
+            >
+              <button type="button" data-v="only">一人っ子</button>
+              <button type="button" data-v="first">長子</button>
+              <button type="button" data-v="middle">真ん中</button>
+              <button type="button" data-v="youngest">末っ子</button>
+              <button type="button" data-v="twin">双子・多胎</button>
+              <button type="button" data-v="unknown">不明</button>
+            </div>
+          </div>
+
+
+          <!-- 05 血液型 -->
+          <div class="field">
+            <label>
+              <span class="field-number">05</span>
+              血液型
+              <small>BLOOD TYPE</small>
+            </label>
+
+            <div
+              class="choices"
+              data-k="blood"
+            >
+              <button type="button" data-v="A">A型</button>
+              <button type="button" data-v="B">B型</button>
+              <button type="button" data-v="O">O型</button>
+              <button type="button" data-v="AB">AB型</button>
+            </div>
+          </div>
+
+
+          <!-- 06 出生環境 -->
+          <div class="field">
+            <label>
+              <span class="field-number">06</span>
+              出生環境
+              <small>BIRTH ENVIRONMENT</small>
+            </label>
+
+            <div
+              class="choices six"
+              data-k="origin"
+            >
+              <button type="button" data-v="mountain">山</button>
+              <button type="button" data-v="river">川</button>
+              <button type="button" data-v="sea">海</button>
+              <button type="button" data-v="city">街</button>
+              <button type="button" data-v="country">田園</button>
+              <button type="button" data-v="oldcity">古都</button>
+              <button type="button" data-v="unknown">不明</button>
+            </div>
+          </div>
+
+
+          <!-- 07 氏名の音数 -->
+          <div class="field">
+            <label>
+              <span class="field-number">07</span>
+              氏名を構成する音の数
+              <small>PHONETIC COUNT / V</small>
+            </label>
+
+            <div class="number-input">
+              <input
+                type="number"
+                id="phonetic"
+                min="1"
+                max="99"
+                step="1"
+                placeholder="例：6"
+                inputmode="numeric"
+              >
+              <span>音</span>
+            </div>
+
+            <p class="field-note">
+              氏名を構成する音の数を入力してください。
+              例：「たかはし けん」→ 6音 → V = 6
+            </p>
+          </div>
+
+
+          <!-- 08 名前に含まれる数字 -->
+          <div class="field">
+            <label>
+              <span class="field-number">08</span>
+              名前に含まれる数字
+              <small>NAME NUMBER</small>
+            </label>
+
+            <div class="number-input">
+              <input
+                type="number"
+                id="nameNumber"
+                min="0"
+                max="999"
+                step="1"
+                placeholder="例：7"
+                inputmode="numeric"
+              >
+            </div>
+
+            <p class="field-note">
+              名前に含まれる数字を合計した値を入力してください。
+              例：「一ノ瀬六花」→ 1 + 6 = 7
+            </p>
+          </div>
+
+
+          <!-- 09 出生時間帯 -->
+          <div class="field">
+            <label>
+              <span class="field-number">09</span>
+              出生時間帯
+              <small>BIRTH TIME</small>
+            </label>
+
+            <div
+              class="choices four"
+              data-k="time"
+            >
+              <button type="button" data-v="midnight">未明</button>
+              <button type="button" data-v="dawn">明け方</button>
+              <button type="button" data-v="morning">朝</button>
+              <button type="button" data-v="before-noon">昼前</button>
+              <button type="button" data-v="afternoon">昼過ぎ</button>
+              <button type="button" data-v="evening">夕方</button>
+              <button type="button" data-v="night">夜</button>
+              <button type="button" data-v="late-night">深夜</button>
+              <button type="button" data-v="unknown">不明</button>
+            </div>
+
+            <p class="field-note">
+              気象庁の「1日の時間の細分」を基準とした8区分です。
+            </p>
+          </div>
+
+
+          <!-- 10 特殊血統 -->
+          <div class="field">
+            <label>
+              <span class="field-number">10</span>
+              特殊血統
+              <small>SPECIAL LINEAGE</small>
+            </label>
+
+            <div
+              class="choices six"
+              data-k="lineage"
+            >
+              <button type="button" data-v="god">
+                神の血
+              </button>
+
+              <button type="button" data-v="dragon">
+                竜の血
+              </button>
+
+              <button type="button" data-v="spirit">
+                精霊の血
+              </button>
+
+              <button type="button" data-v="demon">
+                魔族の血
+              </button>
+
+              <button type="button" data-v="yokai">
+                妖の血
+              </button>
+
+              <button type="button" data-v="angel">
+                天使の血
+              </button>
+
+              <button type="button" data-v="none">
+                なし
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- DIAGNOSIS ITEM -->
+      <div class="panel diagnosis-panel">
+
+        <div class="panel-heading">
+          <div>
+            <span class="panel-number">02</span>
+            <span class="panel-title">診断項目</span>
+          </div>
+
+          <span class="panel-en">
+            DIAGNOSIS ITEMS
+          </span>
+        </div>
+
+
+        <div class="diagnosis-grid">
+
+          <div class="diagnosis-card">
+            <span>01</span>
+            <strong>魔力適性</strong>
+            <small>MAGIC APTITUDE</small>
+          </div>
+
+          <div class="diagnosis-card">
+            <span>02</span>
+            <strong>能力特性</strong>
+            <small>ABILITY PROFILE</small>
+          </div>
+
+          <div class="diagnosis-card">
+            <span>03</span>
+            <strong>精神傾向</strong>
+            <small>MENTAL PATTERN</small>
+          </div>
+
+          <div class="diagnosis-card">
+            <span>04</span>
+            <strong>相性傾向</strong>
+            <small>COMPATIBILITY</small>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- FLOW -->
+      <div class="panel flow-panel">
+
+        <div class="panel-heading">
+          <div>
+            <span class="panel-number">03</span>
+            <span class="panel-title">診断の流れ</span>
+          </div>
+
+          <span class="panel-en">
+            ANALYSIS FLOW
+          </span>
+        </div>
+
+
+        <div class="flow">
+
+          <div class="flow-item">
+            <span>01</span>
+            <strong>情報入力</strong>
+            <small>INPUT</small>
+          </div>
+
+          <div class="flow-line"></div>
+
+          <div class="flow-item">
+            <span>02</span>
+            <strong>解析</strong>
+            <small>ANALYSIS</small>
+          </div>
+
+          <div class="flow-line"></div>
+
+          <div class="flow-item">
+            <span>03</span>
+            <strong>照合</strong>
+            <small>COMPARISON</small>
+          </div>
+
+          <div class="flow-line"></div>
+
+          <div class="flow-item">
+            <span>04</span>
+            <strong>結果表示</strong>
+            <small>REPORT</small>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- ERROR -->
+      <p id="error" class="error" aria-live="polite"></p>
+
+
+      <!-- START BUTTON -->
+      <button id="go" class="primary-button" type="button">
+        <span>解析を開始する</span>
+        <span class="arrow">→</span>
+      </button>
+
+
+      <button id="clear" class="sub-button" type="button">
+        入力内容をリセット
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         RESULT
+    ========================== -->
+    <section id="result" class="page-section hidden">
+
+      <div class="breadcrumb">
+        SEIYOMI RESEARCH INSTITUTE
+        <span>/</span>
+        ANALYSIS RESULT
+      </div>
+
+      <div class="page-title">
+        <span class="title-number">02</span>
+
+        <div>
+          <h1>診断結果</h1>
+          <p>ANALYSIS RESULT</p>
+        </div>
+      </div>
+
+
+      <div class="panel">
+
+        <div class="result-header">
+          <div>
+            <span class="result-label">YOUR RESULT</span>
+            <h2 id="grade">---</h2>
+          </div>
+
+          <div class="report-id">
+            REPORT ID<br>
+            <strong id="rid">---</strong>
+          </div>
+        </div>
+
+
+        <div class="gradebox">
+
+          <div class="grade-main">
+            <span>総合適性</span>
+            <strong id="total">---</strong>
+          </div>
+
+          <div class="bar">
+            <div id="totalbar"></div>
+          </div>
+
+        </div>
+
+
+        <div class="profile">
+
+          <div class="mini">
+            <span>TYPE</span>
+            <strong id="type">---</strong>
+          </div>
+
+          <div class="mini">
+            <span>RECORD</span>
+            <strong id="record">---</strong>
+          </div>
+
+        </div>
+
+
+        <div class="result-block">
+
+          <h3>能力傾向</h3>
+          <p id="abilities">---</p>
+
+        </div>
+
+
+        <div class="result-block">
+
+          <h3>総合解説</h3>
+          <p id="summary">---</p>
+
+        </div>
+
+
+        <div class="result-block">
+
+          <h3>人生傾向</h3>
+          <p id="life">---</p>
+
+        </div>
+
+
+        <div class="result-block">
+
+          <h3>注意傾向</h3>
+
+          <p id="risk">---</p>
+
+          <div class="bar">
+            <div id="riskbar"></div>
+          </div>
+
+        </div>
+
+
+        <div class="result-block">
+
+          <h3>相性傾向</h3>
+          <p id="compat">---</p>
+
+        </div>
+
+
+        <div class="button-row">
+
+          <button id="detail" class="primary-button" type="button">
+            詳細分析を見る →
+          </button>
+
+          <button id="png" class="sub-button" type="button">
+            結果画像を作成
+          </button>
+
+          <button id="back" class="sub-button" type="button">
+            入力画面へ戻る
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DETAILS
+    ========================== -->
+    <section id="details" class="page-section hidden">
+
+      <div class="breadcrumb">
+        SEIYOMI RESEARCH INSTITUTE
+        <span>/</span>
+        DETAILED REPORT
+      </div>
+
+      <div class="page-title">
+        <span class="title-number">03</span>
+
+        <div>
+          <h1>詳細分析</h1>
+          <p>DETAILED REPORT</p>
+        </div>
+      </div>
+
+
+      <div class="panel">
+
+        <div class="detail-head">
+          <span class="result-label">CLASSIFICATION</span>
+          <h2 id="dtype">---</h2>
+          <p id="dlead">---</p>
+        </div>
+
+
+        <div class="detail-grid">
+
+          <div class="detail-card">
+            <span>ESSENCE</span>
+            <h3>本質</h3>
+            <p id="essence">---</p>
+          </div>
+
+          <div class="detail-card">
+            <span>STRENGTH</span>
+            <h3>強み</h3>
+            <p id="strength">---</p>
+          </div>
+
+          <div class="detail-card">
+            <span>CAUTION</span>
+            <h3>注意点</h3>
+            <p id="caution">---</p>
+          </div>
+
+          <div class="detail-card">
+            <span>FIELDS</span>
+            <h3>適性分野</h3>
+            <p id="fields">---</p>
+          </div>
+
+        </div>
+
+
+        <div class="button-row">
+
+          <button id="dpng" class="primary-button" type="button">
+            詳細結果画像を作成
+          </button>
+
+          <button id="bres" class="sub-button" type="button">
+            結果画面へ戻る
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="site-footer">
+
+    <div class="footer-mark">✦</div>
+
     <div>
       <strong>星詠み研究所</strong>
-      <small>SEIYOMI RESEARCH INSTITUTE</small>
+      <span>SEIYOMI RESEARCH INSTITUTE</span>
     </div>
-  </div>
-  <span>PERSONALITY RESEARCH / ARCHIVE</span>
-</header>
-<main>
-<!-- =========================
-     INPUT
-========================= -->
-<section id="input" class="page on">
-  <div class="title">
-    <div>
-      <small>RESEARCH INTAKE / 01</small>
-      <h1>情報入力</h1>
-    </div>
-    <i>INPUT FORM</i>
-  </div>
-  <p class="lead">
-    あなたの基本情報を入力してください。<br>
-    入力された情報をもとに、数秘術と星詠みをモチーフとした独自の解析を行います。
-  </p>
-  <div class="panel">
-    <div class="ph">
-      <b>基本情報</b>
-      <small>ALL FIELDS REQUIRED</small>
-    </div>
-    <div class="form">
-      <!-- 生年月日 -->
-      <label>
-        生年月日
-        <em>BIRTH DATE</em>
-        <input id="date" type="date">
-      </label>
-      <!-- 血液型 -->
-      <div class="field">
-        <label>
-          血液型
-          <em>BLOOD TYPE</em>
-        </label>
-        <div class="choices" data-k="blood">
-          <button>A型</button>
-          <button>B型</button>
-          <button>O型</button>
-          <button>AB型</button>
-        </div>
-      </div>
-      <!-- 出身 -->
-      <div class="field wide">
-        <label>
-          出身
-          <em>ORIGIN</em>
-        </label>
-        <div class="choices six" data-k="origin">
-          <button>山</button>
-          <button>川</button>
-          <button>海</button>
-          <button>街</button>
-          <button>田園</button>
-          <button>古都</button>
-        </div>
-      </div>
-      <!-- 星座 -->
-      <div class="field wide">
-        <label>
-          星座
-          <em>ZODIAC</em>
-        </label>
-        <div class="choices six" data-k="zodiac">
-          <button>牡羊座</button>
-          <button>牡牛座</button>
-          <button>双子座</button>
-          <button>蟹座</button>
-          <button>獅子座</button>
-          <button>乙女座</button>
-          <button>天秤座</button>
-          <button>蠍座</button>
-          <button>射手座</button>
-          <button>山羊座</button>
-          <button>水瓶座</button>
-          <button>魚座</button>
-        </div>
-      </div>
-      <!-- 家族関係 -->
-      <div class="field">
-        <label>
-          家族関係
-          <em>FAMILY</em>
-        </label>
-        <div class="choices two" data-k="family">
-          <button>一人っ子</button>
-          <button>長子</button>
-          <button>真ん中</button>
-          <button>末っ子</button>
-        </div>
-      </div>
-      <!-- 利き手 -->
-      <div class="field">
-        <label>
-          利き手
-          <em>DOMINANT HAND</em>
-        </label>
-        <div class="choices two" data-k="hand">
-          <button>右利き</button>
-          <button>左利き</button>
-          <button>両利き</button>
-          <button>不明</button>
-        </div>
-      </div>
-      <!-- 出生時間 -->
-      <div class="field wide">
-        <label>
-          出生時間
-          <em>BIRTH TIME</em>
-        </label>
-        <div class="choices four" data-k="time">
-          <button>0:00–2:59</button>
-          <button>3:00–5:59</button>
-          <button>6:00–8:59</button>
-          <button>9:00–11:59</button>
-          <button>12:00–14:59</button>
-          <button>15:00–17:59</button>
-          <button>18:00–20:59</button>
-          <button>21:00–23:59</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <p id="error" class="error" hidden>
-    未入力の項目があります。すべて選択してください。
-  </p>
-  <div class="steps">
-    01 <b>INPUT</b>　 02 ANALYSIS　 03 REPORT
-  </div>
-  <div class="actions">
-    <button id="go" class="primary">
-      ✦ 解析を開始する →
-    </button>
-    <button id="clear" class="secondary">
-      ↻ 入力内容をリセット
-    </button>
-  </div>
-</section>
-<!-- =========================
-     RESULT
-========================= -->
-<section id="result" class="page">
-  <div class="title">
-    <div>
-      <small>RESEARCH REPORT / 02</small>
-      <h1>診断結果</h1>
-    </div>
-    <i>ANALYSIS REPORT</i>
-  </div>
-  <div class="grid">
-    <!-- 総合評価 -->
-    <aside class="panel gradebox">
-      <small>OVERALL GRADE</small>
-      <strong id="grade">A+</strong>
-      <div class="score">
-        <span>総合適性</span>
-        <b id="total">--</b>
-      </div>
-      <div class="bar">
-        <i id="totalbar"></i>
-      </div>
-      <hr>
-      <small>REPORT ID</small>
-      <code id="rid">SR-000000</code>
-    </aside>
-    <!-- 中央 -->
-    <div class="center">
-      <div class="panel">
-        <div class="ph">
-          <b>基本情報</b>
-          <small>BASIC RECORD</small>
-        </div>
-        <dl id="record"></dl>
-      </div>
-      <div class="panel">
-        <div class="ph">
-          <b>能力解析</b>
-          <small>ABILITY STATUS</small>
-        </div>
-        <div id="abilities" class="abilities"></div>
-      </div>
-    </div>
-    <!-- 右 -->
-    <aside class="right">
-      <div class="panel profile">
-        <small>PERSONAL PROFILE</small>
-        <h2 id="type">—</h2>
-        <p id="summary">—</p>
-      </div>
-      <div class="panel mini">
-        <small>NUMEROLOGY</small>
-        <strong id="life">--</strong>
-        <p>運命数</p>
-      </div>
-      <div class="panel mini">
-        <small>RISK INDEX</small>
-        <strong id="risk">--</strong>
-        <p>変動性指数 / 100</p>
-        <div class="bar">
-          <i id="riskbar"></i>
-        </div>
-      </div>
-    </aside>
-  </div>
-  <!-- 属性適性 -->
-  <div class="panel compat">
-    <div class="ph">
-      <b>属性適性</b>
-      <small>ATTRIBUTE COMPATIBILITY</small>
-    </div>
-    <div id="compat" class="compatgrid"></div>
-  </div>
-  <div class="actions">
-    <button id="detail" class="primary">
-      詳細診断を見る →
-    </button>
-    <button id="png" class="secondary">
-      ▣ SNS用画像を生成
-    </button>
-    <button id="back" class="text">
-      ← 入力画面へ戻る
-    </button>
-  </div>
-</section>
-<!-- =========================
-     DETAIL
-========================= -->
-<section id="details" class="page">
-  <div class="title">
-    <div>
-      <small>RESEARCH REPORT / 03</small>
-      <h1>詳細診断</h1>
-    </div>
-    <i>DETAILED REPORT</i>
-  </div>
-  <div class="detail">
-    <article class="panel hero">
-      <small>PERSONAL PROFILE</small>
-      <h2 id="dtype">—</h2>
-      <p id="dlead">—</p>
-    </article>
-    <article class="panel">
-      <div class="ph">
-        <b>本質</b>
-        <small>ESSENCE</small>
-      </div>
-      <p id="essence"></p>
-    </article>
-    <article class="panel">
-      <div class="ph">
-        <b>強み</b>
-        <small>STRENGTH</small>
-      </div>
-      <ul id="strength"></ul>
-    </article>
-    <article class="panel">
-      <div class="ph">
-        <b>注意点</b>
-        <small>OBSERVATION</small>
-      </div>
-      <ul id="caution"></ul>
-    </article>
-    <article class="panel">
-      <div class="ph">
-        <b>適性領域</b>
-        <small>FIELD OF APTITUDE</small>
-      </div>
-      <p id="fields"></p>
-    </article>
-  </div>
-  <div class="actions">
-    <button id="dpng" class="secondary">
-      ▣ SNS用画像を生成
-    </button>
-    <button id="bres" class="text">
-      ← 結果一覧へ戻る
-    </button>
-  </div>
-</section>
-</main>
-<footer>
-  SEIYOMI RESEARCH INSTITUTE · PERSONALITY ARCHIVE
-</footer>
-<script src="script.js"></script>
+
+    <p>
+      A fictional research institute for arcane aptitude analysis.
+    </p>
+
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
 </body>
 </html>
