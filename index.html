@@ -193,59 +193,59 @@
           </div>
 
 
-          <!-- 07 氏名の音数 -->
-          <div class="field">
-            <label>
-              <span class="field-number">07</span>
-              氏名を構成する音の数
-              <small>PHONETIC COUNT / V</small>
-            </label>
+          <!-- 07・08 数値入力 -->
+<div class="number-fields">
 
-            <div class="number-input">
-              <input
-                type="number"
-                id="phonetic"
-                min="1"
-                max="99"
-                step="1"
-                placeholder="例：6"
-                inputmode="numeric"
-              >
-              <span>音</span>
-            </div>
+  <!-- 07 -->
+  <div class="number-field">
 
-            <p class="field-note">
-              氏名を構成する音の数を入力してください。
-              例：「たかはし けん」→ 6音 → V = 6
-            </p>
-          </div>
+    <label>
+      <span class="field-number">07</span>
+      氏名を構成する音の数
+      <small>PHONETIC COUNT / V</small>
+    </label>
+
+    <div class="number-box">
+      <input
+        type="number"
+        id="phonetic"
+        min="1"
+        max="99"
+        step="1"
+        placeholder="例：6"
+        inputmode="numeric"
+      >
+      <span class="number-unit">音</span>
+    </div>
+
+  </div>
 
 
-          <!-- 08 名前に含まれる数字 -->
-          <div class="field">
-            <label>
-              <span class="field-number">08</span>
-              名前に含まれる数字
-              <small>NAME NUMBER</small>
-            </label>
+  <!-- 08 -->
+  <div class="number-field">
 
-            <div class="number-input">
-              <input
-                type="number"
-                id="nameNumber"
-                min="0"
-                max="999"
-                step="1"
-                placeholder="例：7"
-                inputmode="numeric"
-              >
-            </div>
+    <label>
+      <span class="field-number">08</span>
+      名前に含まれる数字
+      <small>NAME NUMBER</small>
+    </label>
 
-            <p class="field-note">
-              名前に含まれる数字を合計した値を入力してください。
-              例：「一ノ瀬六花」→ 1 + 6 = 7
-            </p>
-          </div>
+    <div class="number-box">
+      <input
+        type="number"
+        id="nameNumber"
+        min="0"
+        max="999"
+        step="1"
+        placeholder="例：7"
+        inputmode="numeric"
+      >
+    </div>
+
+  </div>
+
+</div>
+
 
 
           <!-- 09 出生時間帯 -->
